@@ -1,3 +1,3 @@
 insertar(N,[],[N]).
-insertar(N,[X Y|Cola],[X N Y|Cola]) :-  X=<N, Y>N.
-insertar(N,[X Y|Cola],Resultado) :-  X=<N, Y=<N,insertar(N,[Y|Cola], Resultado).
+insertar(N,[X |Cola],[X|Result]) :-  N>X ,insertar(N,Cola,Result).
+insertar(N, [X | Cola], [N, X| Cola]) :- N=<X.
