@@ -1,0 +1,5 @@
+Cuando ejecutamos el archivo directamente con el interprete de racket necesitamos tener una linea al principio de nuestro archivo .rkt
+como la siguiente: #lang racket  La línea #lang racket indica que el archivo debe ser interpretado usando el lenguaje Racket.
+
+La línea #lang racket solo debe estar si ejecutás el archivo como un programa principal (por ejemplo, con racket tp.rkt o desde DrRacket).
+No debe estar si vas a cargar el archivo con (load "tp.rkt") desde el REPL, porque #lang racket solo puede estar al principio de un archivo que se ejecuta como módulo, y load espera código plano de Racket, no un módulo.

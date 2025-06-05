@@ -1,0 +1,1 @@
+Primero instalamos el interprete de prolog, swipl, luego agregamos su ruta al path y agregamos la extensión prolog a visual
