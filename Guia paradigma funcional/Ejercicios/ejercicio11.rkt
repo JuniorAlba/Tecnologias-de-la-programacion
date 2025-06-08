@@ -10,4 +10,14 @@
                 [else  (cantidad elem (cdr list))]))])
     (cantidad elem lista)))
 
+;otra forma de hacerlo
+(define (count-elem-angel Elem Lista)
+    (if (null? Lista)
+        0
+        (+ (if (equal? Elem (car Lista))
+            1
+            0
+        )(count-elem Elem (cdr Lista)))
+    )
+)
 (count-elem 2 '(1 2 2 3 2 3 2 5 6))
