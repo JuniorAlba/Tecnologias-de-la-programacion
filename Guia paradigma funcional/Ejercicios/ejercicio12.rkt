@@ -11,3 +11,16 @@
         [else (cons (car lista1) (aux sust1 reemp1 (cdr lista1)))]))])
     (aux sust reemp lista)))
 (subst 'c 'k '( c o c o n u t))
+
+
+
+;otra forma de hacerlo
+(define (subst_angel ElemR Rem Lista)
+    (if (null? Lista)
+        '()
+        (cons (if (equal? ElemR (car Lista))
+            Rem
+            (car Lista)
+        )(subst ElemR Rem (cdr Lista)))
+    )
+)
